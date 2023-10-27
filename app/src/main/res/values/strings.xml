@@ -1,3 +1,10 @@
+
 <resources>
-    <string name="app_name">ArtSpace</string>
+<string name="app_name">Art Space App</string>
+<string name="first_image">Denji</string>
+<string name="second_image">Naruto</string>
+<string name="third_image">Sanji</string>
+<string name="forth_image">Zero Two</string>
+<string name="author">\@erlandzumabaev@gmail.com</string>
+<string name="year">2023</string>
 </resources>
