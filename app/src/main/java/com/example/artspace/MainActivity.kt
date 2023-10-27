@@ -3,15 +3,20 @@ package com.example.artspace
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.data.EmptyGroup.name
@@ -34,6 +39,18 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ArtSpaceScreen(modifier: Modifier = Modifier) {
+}
+@Composable
+fun ArtworkDisplay(
+    modifier: Modifier = Modifier,
+    @DrawableRes currentArtwork: Int
+) {
+    Image(
+        painter = painterResource(currentArtwork),
+        contentDescription = stringResource(id = R.string.zero_two),
+        modifier = modifier.fillMaxWidth(),
+        contentScale = ContentScale.FillWidth
+    )
 }
 @Composable
 fun ArtworkTitle(
